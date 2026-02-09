@@ -1,39 +1,74 @@
 body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #1e1e1e;
-  color: white;
-  text-align: center;
+  overflow: hidden;
 }
-h1{
-  color: orangered;
+
+.terminal {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ff00;
+  position: relative;
+}
+
+.ascii-face {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.buttons {
+  margin-top: 20px;
 }
 
 button {
-  padding: 15px 30px;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 10px 20px;
+  margin: 10px;
   cursor: pointer;
-  background: #ff6f61;
-  color: white;
-  transition: transform 0.2s ease, background 0.3s ease;
+  font-family: monospace;
+  font-size: 1rem;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
-button:active {
-  transform: scale(1.2) rotate(10deg);
-  background: #ff3b2e;
+button:hover {
+  background: #00ff00;
+  color: #0f0f0f;
+}
+
+#smoke {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.smoke-effect {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(0,255,0,0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: smoke 0.8s forwards;
+}
+
+@keyframes smoke {
+  0% { transform: translate(0,0) scale(0.5); opacity: 1; }
+  100% { transform: translate(-50px, -100px) scale(2); opacity: 0; }
 }
 
 @media (max-width: 600px) {
-  button {
-    width: 80%;
-    font-size: 1rem;
-  }
+  .ascii-face { font-size: 1.2rem; }
+  button { padding: 8px 15px; margin: 5px; font-size: 0.9rem; }
 }

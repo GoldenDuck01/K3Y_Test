@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notepad</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #111;
+      color: #0f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: monospace;
+    }
+    textarea {
+      width: 80%;
+      height: 50%;
+      background: #000;
+      border: 2px solid #0f0;
+      color: #0f0;
+      font-size: 1rem;
+      padding: 10px;
+      animation: fadeIn 1s;
+    }
+    @keyframes fadeIn {
+      from {opacity:0}
+      to {opacity:1}
+    }
+  </style>
+</head>
+<body>
+  <h1>Write your note</h1>
+  <textarea placeholder="Type something..."></textarea>
+</body>
+</html>
