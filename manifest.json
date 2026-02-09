@@ -1,10 +1,10 @@
 {
-  "name": "Welcome to K3Y",
+  "name": "K3Y Terminal",
   "short_name": "K3Y",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#1e1e1e",
-  "theme_color": "#ff6f61",
+  "background_color": "#0f0f0f",
+  "theme_color": "#00ff00",
   "icons": [
     {
       "src": "icon-192.png",
