@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+}
+
+button {
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ff6f61;
+  color: white;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:active {
+  transform: scale(1.2) rotate(10deg);
+  background: #ff3b2e;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
