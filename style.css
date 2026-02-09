@@ -11,6 +11,10 @@ body {
   text-align: center;
 }
 
+#heading{
+  color: orangered;
+}
+
 button {
   padding: 15px 30px;
   margin-top: 20px;
