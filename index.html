@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="icon-192.png">
-  <title>K3Y Terminal</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>K3Y Terminal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff8c00">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-192.png">
 </head>
 <body>
-  <div class="terminal">
-    <pre class="ascii-face">
-    [ :) ]
-    </pre>
-
-    <div class="buttons">
-      <button data-target="note.html">Open Notepad</button>
-      <button data-target="https://example.com">External Page</button>
-    </div>
+<div class="terminal">
+  <pre class="ascii-face">(0-0)</pre>
+  <div class="buttons">
+    <button data-target="note.html">Open Notepad</button>
   </div>
+</div>
+<div id="smoke"></div>
 
-  <div id="smoke"></div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
 </body>
 </html>
-

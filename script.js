@@ -1,8 +1,6 @@
-const buttons = document.querySelectorAll('button');
-const smokeContainer = document.getElementById('smoke');
-
+const buttons = document.querySelectorAll('button[data-target]');
 buttons.forEach(btn => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', () => {
     const rect = btn.getBoundingClientRect();
     for(let i=0;i<5;i++){
       const smoke = document.createElement('div');
@@ -12,9 +10,9 @@ buttons.forEach(btn => {
       document.body.appendChild(smoke);
       setTimeout(() => smoke.remove(), 800);
     }
-
     setTimeout(() => {
       window.location.href = btn.dataset.target;
     }, 300);
   });
 });
+

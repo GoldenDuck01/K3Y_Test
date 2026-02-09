@@ -1,27 +1,28 @@
 body {
   margin: 0;
-  background: #0f0f0f;
-  color: #00ff00;
   font-family: 'Courier New', monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   overflow: hidden;
+  background: #000;
 }
 
 .terminal {
   text-align: center;
   padding: 20px;
-  border: 2px solid #00ff00;
+  border: 2px solid #ff8c00;
   border-radius: 10px;
-  box-shadow: 0 0 20px #00ff00;
+  box-shadow: 0 0 20px #ff8c00;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .ascii-face {
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1.2;
+  color: #ff8c00;
 }
 
 .buttons {
@@ -30,8 +31,8 @@ body {
 
 button {
   background: transparent;
-  border: 2px solid #00ff00;
-  color: #00ff00;
+  border: 2px solid #ff8c00;
+  color: #ff8c00;
   padding: 10px 20px;
   margin: 10px;
   cursor: pointer;
@@ -43,8 +44,8 @@ button {
 }
 
 button:hover {
-  background: #00ff00;
-  color: #0f0f0f;
+  background: #ff8c00;
+  color: #000;
 }
 
 #smoke {
@@ -58,7 +59,7 @@ button:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, rgba(0,255,0,0.8) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,140,0,0.8) 0%, transparent 70%);
   border-radius: 50%;
   animation: smoke 0.8s forwards;
 }
@@ -69,6 +70,6 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  .ascii-face { font-size: 1.2rem; }
+  .ascii-face { font-size: 2rem; }
   button { padding: 8px 15px; margin: 5px; font-size: 0.9rem; }
 }
